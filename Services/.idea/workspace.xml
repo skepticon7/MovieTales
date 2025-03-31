@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="06853d0e-96bd-4216-8269-af82c085dd7a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/movie-service/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Entities/Movie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Entities/MovieTracker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Entities/Review.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Enums/Roles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Enums/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/MovieServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/test/java/com/example/movie_service/MovieServiceApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2v6HltJ9LDPjwbgt8E62T08alkz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Black/Desktop/MicroService/MovieTales/services/gateway-service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06853d0e-96bd-4216-8269-af82c085dd7a" name="Changes" comment="" />
+      <created>1743458759423</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743458759423</updated>
+      <workItem from="1743458760498" duration="45000" />
+      <workItem from="1743458822222" duration="306000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
