@@ -1,21 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="06853d0e-96bd-4216-8269-af82c085dd7a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/movie-service/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Entities/Movie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Entities/MovieTracker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Entities/Review.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Enums/Roles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/Enums/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/com/example/movie_service/MovieServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/test/java/com/example/movie_service/MovieServiceApplicationTests.java" beforeDir="false" />
+    <list default="true" id="9799ef22-772a-4c1b-acb1-0128f95dec4a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/discovery-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/java/ma/movieTales/discovery_service/DiscoveryServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/src/test/java/ma/movieTales/discovery_service/DiscoveryServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/MovieTales.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/src/main/java/ma/movieTales/config_service/ConfigServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/java/ma/movieTales/config_service/ConfigServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/src/test/java/ma/movieTales/config_service/ConfigServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/test/java/ma/movieTales/config_service/ConfigServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ma/movieTales/gateway_service/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ma/movieTales/gateway_service/GatewayServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/test/java/ma/movieTales/gateway_service/GatewayServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/test/java/ma/movieTales/gateway_service/GatewayServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/MovieServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/MovieServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/MovieServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/MovieServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,20 +58,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2v6HltJ9LDPjwbgt8E62T08alkz" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2v8ewsgW4VRBrZB4YO4MWhyWSCy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.DiscoveryServiceApplication.executor": "Run",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Black/Desktop/MicroService/MovieTales/services/gateway-service",
+    "last_opened_file_path": "C:/Users/Black/Desktop/MicroService/MovieTales/services/config-service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +87,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.movieTales.gateway_service.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -59,13 +107,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="06853d0e-96bd-4216-8269-af82c085dd7a" name="Changes" comment="" />
-      <created>1743458759423</created>
+      <changelist id="9799ef22-772a-4c1b-acb1-0128f95dec4a" name="Changes" comment="" />
+      <created>1743531371320</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1743458759423</updated>
-      <workItem from="1743458760498" duration="45000" />
-      <workItem from="1743458822222" duration="306000" />
+      <updated>1743531371320</updated>
+      <workItem from="1743531372387" duration="714000" />
     </task>
     <servers />
   </component>
