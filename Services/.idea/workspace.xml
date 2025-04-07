@@ -5,62 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9799ef22-772a-4c1b-acb1-0128f95dec4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/discovery-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/java/ma/movieTales/discovery_service/DiscoveryServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/src/test/java/ma/movieTales/discovery_service/DiscoveryServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/MovieTales.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/web/controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/mvnw.cmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-service/src/main/java/ma/movieTales/config_service/ConfigServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/java/ma/movieTales/config_service/ConfigServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/src/test/java/ma/movieTales/config_service/ConfigServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/test/java/ma/movieTales/config_service/ConfigServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ma/movieTales/gateway_service/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ma/movieTales/gateway_service/GatewayServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/test/java/ma/movieTales/gateway_service/GatewayServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/test/java/ma/movieTales/gateway_service/GatewayServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/mvnw.cmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/MovieServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/MovieServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/MovieServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/MovieServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/movie-service/pom.xml" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2v8ewsgW4VRBrZB4YO4MWhyWSCy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -73,24 +52,71 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ConfigServiceApplication.executor": "Run",
     "Spring Boot.DiscoveryServiceApplication.executor": "Run",
     "Spring Boot.GatewayServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "Spring Boot.MovieServiceApplication.executor": "Run",
+    "git-widget-placeholder": "movieServiceBranch",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Black/Desktop/MicroService/MovieTales/services/config-service",
+    "last_opened_file_path": "C:/Users/Black/Desktop/MicroService/MovieTales/services/config-repo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Properties"
+    ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ma.movieTales.movie_service.web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Black\Desktop\MicroService\MovieTales\services\config-repo" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ConfigServiceApplication">
+    <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.movieTales.config_service.ConfigServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="discovery-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.movieTales.discovery_service.DiscoveryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ma.movieTales.gateway_service.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="movie-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.movieTales.movie_service.MovieServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,6 +139,11 @@
       <option name="presentableId" value="Default" />
       <updated>1743531371320</updated>
       <workItem from="1743531372387" duration="714000" />
+      <workItem from="1743603531683" duration="6812000" />
+      <workItem from="1743610663493" duration="3787000" />
+      <workItem from="1743614479225" duration="1462000" />
+      <workItem from="1743764206779" duration="56000" />
+      <workItem from="1744023026252" duration="3919000" />
     </task>
     <servers />
   </component>
