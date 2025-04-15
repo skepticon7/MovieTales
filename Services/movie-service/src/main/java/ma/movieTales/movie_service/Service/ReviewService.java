@@ -10,18 +10,15 @@ import java.util.Optional;
 public interface ReviewService {
 
     //adding a review to a movie
-    Optional<Review> addReviewToMovie(String userId , Long movieId , ReviewDTO reviewDTO);
+    ReviewDTO addReviewToMovie(String userId , Long movieId , ReviewDTO reviewDTO);
 
     //updating a review
-    Optional<Review> updateReview(String userId , Long movieId , ReviewDTO reviewDTO);
+    ReviewDTO updateReview(String userId , Long movieId , ReviewDTO reviewDTO , Long reviewId);
 
     //deleting a review
-    Optional<Review> deleteReview(String userId , Long movieId);
-
-    //getting the movie reviews
-    List<Review> getMovieReviews(Long movieId);
+    ReviewDTO deleteReview(String userId , Long movieId , Long reviewId);
 
     //getting the user reviews
-    List<Review> getUserReviews(String userId);
+    List<ReviewDTO> getUserReviews(String userId);
 
 }

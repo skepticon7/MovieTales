@@ -11,10 +11,12 @@ import org.springframework.boot.autoconfigure.web.WebProperties;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data @Builder @AllArgsConstructor @NoArgsConstructor
 @Entity
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})})
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,13 +31,13 @@ public class Movie {
     private LocalDate release_date;
 
     @ManyToMany(mappedBy = "movies")
-    private List<Actor> actors;
+    private List<Actor> actors = new ArrayList<>();
 
     private LocalTime runtime;
 
     @ManyToMany(mappedBy = "movies")
 
-    private List<Genres> genres;
+    private List<Genres> genres = new ArrayList<>();
 
     private String language;
     private Long vote_count;
@@ -44,7 +46,7 @@ public class Movie {
 
 
     @ManyToMany(mappedBy = "movies")
-    private List<ProductionCompany> production_companies;
+    private List<ProductionCompany> production_companies = new ArrayList<>();
 
     private String country;
     private String tagline;
@@ -54,7 +56,7 @@ public class Movie {
     private List<Review> reviews;
 
     @OneToMany(mappedBy = "movie" , cascade = CascadeType.REMOVE)
-    private List<MovieTracker> movieTrackers;
+    private List<MovieTracker> movieTrackers = new ArrayList<>();
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

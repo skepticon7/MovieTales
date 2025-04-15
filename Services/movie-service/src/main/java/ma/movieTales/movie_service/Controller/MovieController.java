@@ -1,5 +1,6 @@
 package ma.movieTales.movie_service.Controller;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import ma.movieTales.movie_service.DTO.MovieDTO;
 import ma.movieTales.movie_service.Service.MovieService;
@@ -15,7 +16,7 @@ public class MovieController {
     private  MovieService movieService;
 
     @PostMapping("/addMovie")
-    public ResponseEntity<MovieDTO> addMovie(@RequestBody MovieDTO movieDTO){
+    public ResponseEntity<MovieDTO> addMovie(@RequestBody @Valid MovieDTO movieDTO){
         MovieDTO movie = movieService.saveMovie(movieDTO);
         return new ResponseEntity<>(movie, HttpStatus.CREATED);
     }
@@ -25,6 +26,5 @@ public class MovieController {
         MovieDTO movie = movieService.getMovie(id);
         return new ResponseEntity<>(movie, HttpStatus.OK);
     }
-
 
 }

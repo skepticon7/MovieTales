@@ -5,6 +5,8 @@ import ma.movieTales.movie_service.DTO.GenreDTO;
 import ma.movieTales.movie_service.Entity.Actor;
 import ma.movieTales.movie_service.Entity.Genres;
 
+import java.util.ArrayList;
+
 public class GenreMapper {
     public static GenreDTO toDto(Genres genres){
         if(genres == null) return null;
@@ -17,6 +19,7 @@ public class GenreMapper {
         if(genreDTO == null) return null;
         return Genres.builder()
                 .name(genreDTO.getName())
+                .movies(new ArrayList<>())
                 .build();
     }
 }

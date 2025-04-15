@@ -5,51 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9799ef22-772a-4c1b-acb1-0128f95dec4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Configuration/RestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/MovieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ActorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/GenreDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ProductionCompanyDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ReviewDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Actor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Genres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/ProductionCompany.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ActorMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/GenreMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/MovieMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ProductionCompanyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ReviewMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/MovieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/MovieTrackerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/ReviewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieTrackerImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/ReviewServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Utils/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app-description.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../architecture-design.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../classDiagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/frontend.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Configuration/ModelMapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ActorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/GenreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/MovieTrackerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ProductionCompanyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ReviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieTrackerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Exceptions/AlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/MovieTrackerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ActorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/GenreRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ProductionCompanyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ActorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ActorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ProductionCompanyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ProductionCompanyDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ReviewDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ReviewDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Genres.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Genres.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/MovieTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/MovieTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/ProductionCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/ProductionCompany.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Enums/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Enums/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ActorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ActorMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/GenreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/GenreMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ProductionCompanyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ProductionCompanyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ReviewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ReviewMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/MovieRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/MovieTrackerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/MovieTrackerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ReviewRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/web/ControllerWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/web/ControllerWeb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/MovieTrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/MovieTrackerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieTrackerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieTrackerImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/ReviewServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/ReviewServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Utils/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Utils/ErrorResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +56,9 @@
       <list>
         <option value="package-info" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -82,41 +78,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ConfigServiceApplication.executor": "Run",
-    "Spring Boot.DiscoveryServiceApplication.executor": "Run",
-    "Spring Boot.GatewayServiceApplication.executor": "Run",
-    "Spring Boot.MovieServiceApplication.executor": "Run",
-    "git-widget-placeholder": "movieServiceBranch",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Black/Desktop/AssetPlatforme",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConfigServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MovieServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;movieServiceBranch&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Black/Desktop/AssetPlatforme&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Properties"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Properties&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="ma.movieTales.movie_service.ServiceImp" />
       <recent name="ma.movieTales.movie_service.Entity" />
       <recent name="ma.movieTales.movie_service.web" />
     </key>
@@ -194,7 +191,12 @@
       <workItem from="1744278953499" duration="5642000" />
       <workItem from="1744309828403" duration="10891000" />
       <workItem from="1744320981711" duration="339000" />
-      <workItem from="1744321345414" duration="2149000" />
+      <workItem from="1744321345414" duration="2517000" />
+      <workItem from="1744365010794" duration="49000" />
+      <workItem from="1744548700735" duration="4478000" />
+      <workItem from="1744554127151" duration="4859000" />
+      <workItem from="1744635449803" duration="6934000" />
+      <workItem from="1744702594934" duration="18566000" />
     </task>
     <servers />
   </component>

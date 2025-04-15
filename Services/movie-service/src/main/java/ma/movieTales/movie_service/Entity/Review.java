@@ -17,7 +17,7 @@ public class Review {
 
     //userId coming from mongoDB in the user-services
     private String userId;
-    @Transient  private User user;
+//    @Transient  private User user;
 
     @ManyToOne
     @JoinColumn(name = "movie_id" , referencedColumnName = "id" , nullable = false)

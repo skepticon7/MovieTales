@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,16 +16,17 @@ public class Actor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
 
-    @ManyToMany
+    //private String image;
+
+        @ManyToMany(cascade = {CascadeType.PERSIST , CascadeType.MERGE})
     @JoinTable(
             name = "movie_actor",
             joinColumns = @JoinColumn(name = "actor_id"),
             inverseJoinColumns = @JoinColumn(name = "movie_id")
     )
-    private List<Movie> movies;
+    private List<Movie> movies = new ArrayList<>();
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

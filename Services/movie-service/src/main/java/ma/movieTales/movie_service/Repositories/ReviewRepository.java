@@ -8,20 +8,21 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ReviewRepository extends JpaRepository<Review , Long> {
 
-    @Query("SELECT r FROM Review r WHERE r.movie.id = :movieId")
-    List<Review> findReviewsByMovieId(@Param("movieId") Long movieId);
-
     @Query("SELECT r FROM Review r WHERE r.userId = :userId")
     List<Review> findReviewsByUserId(@Param("userId") String userId);
 
+    Optional<Review> findReviewById(Long Id);
+
     @Modifying
-    @Query("DELETE FROM Review r WHERE r.movie.id = :movieId")
-    void deleteReview(@Param("movieId") Long movieId);
+    @Query("DELETE FROM Review r WHERE r.id = :reviewId")
+    void deleteReview(@Param("reviewId") Long reviewId);
 
 }
 

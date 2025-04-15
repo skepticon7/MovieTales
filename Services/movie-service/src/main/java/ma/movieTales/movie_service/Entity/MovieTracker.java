@@ -19,11 +19,15 @@ public class MovieTracker {
     private Long id;
 
     //userId coming from mongoDB in the user-services
+
     private String userId;
+//    @Transient  private User user;
 
     @ManyToOne
     @JoinColumn(name = "movie_id" , referencedColumnName = "id" , nullable = false)
     private Movie movie;
+
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     private LocalDateTime createdAt;
