@@ -12,14 +12,15 @@ Welcome to **MovieLand**! This project is a microservices-based movie applicatio
 * **Frontend** built with **Angular**
 
 ## 🗃️ Project Structure
-movieLand/
-├── frontend/
-│   └── movieLand-app
-├── services/
-│   ├── discovery-service
-│   ├── movie-service
-│   ├── config-service
-│   ├── user-service
+
+movieLand/  
+├── frontend/  
+│   └── movieLand-app  
+├── services/  
+│   ├── discovery-service  
+│   ├── movie-service  
+│   ├── config-service  
+│   ├── user-service  
 │   └── gateway-service
 
 
@@ -78,10 +79,10 @@ npm install
 ### 🏃 Running the Services
 Recommended Order:
 
-🌍 Discovery Service
-🔧 Config Service
-🚪 Gateway Service
-👥 User Service
+🌍 Discovery Service  
+🔧 Config Service  
+🚪 Gateway Service  
+👥 User Service  
 🎬 Movie Service
 
 ### 🌱 Run Each Service
