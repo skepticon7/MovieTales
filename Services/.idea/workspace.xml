@@ -4,47 +4,186 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9799ef22-772a-4c1b-acb1-0128f95dec4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Configuration/ModelMapperConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ActorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/GenreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/MovieTrackerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ProductionCompanyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ReviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieTrackerDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Exceptions/AlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/MovieTrackerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ActorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/GenreRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ProductionCompanyRepository.java" afterDir="false" />
+    <list default="true" id="9799ef22-772a-4c1b-acb1-0128f95dec4a" name="Changes" comment="added review service and movie tracker imp">
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/.postcssrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/components.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-button-helm/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-button-helm/src/lib/hlm-button.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-button-helm/src/lib/hlm-button.token.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-icon-helm/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-icon-helm/src/lib/hlm-icon.directive.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-icon-helm/src/lib/hlm-icon.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-icon-helm/src/lib/hlm-icon.token.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-bar-item.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-bar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-group.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-item-check.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-item-checkbox.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-item-icon.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-item-radio.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-item-radio.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-item-sub-indicator.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-item.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-label.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-separator.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu-shortcut.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-menu.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/libs/ui/ui-menu-helm/src/lib/hlm-sub-menu.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/Frame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/down-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/imdb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/inception.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/inception.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/movie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/scope.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/public/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/app.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/app.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/auth/login/login.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/auth/login/login.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/auth/login/login.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/auth/login/login.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/auth/signup/signup.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/auth/signup/signup.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/auth/signup/signup.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/auth/signup/signup.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/component/movie/movie.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/component/movie/movie.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/component/movie/movie.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/component/movie/movie.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/layout/layout.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/layout/layout.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/layout/layout.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/layout/layout.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/navbar/navbar.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/navbar/navbar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/navbar/navbar.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/navbar/navbar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/sidebar/sidebar.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/sidebar/sidebar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/sidebar/sidebar.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/core/sidebar/sidebar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/home/home.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/home/home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/home/home.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/home/home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/search/search.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/search/search.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/search/search.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/search/search.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/settings/settings.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/settings/settings.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/settings/settings.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/settings/settings.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/watched/watched.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/watched/watched.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/watched/watched.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/watched/watched.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/watchlist/watchlist.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/watchlist/watchlist.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/watchlist/watchlist.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/features/watchlist/watchlist.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/app/utils/auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/movieLand-app/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ma/movieTales/gateway_service/Configuration/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Configuration/JwtTokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Configuration/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieStatsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/UserMovieTrackersDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/UserReviewsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/UserTrackersAndReviewsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Filters/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/UserMovieTrackersMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/UserReviewsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Utils/CustomAccessDenierHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Utils/CustomAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/Repositories/MovieRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/Repositories/MovieTrackerRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/Repositories/ReviewRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/ServiceImp/MovieServiceImpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/ServiceImp/MovieTrackerImpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie-service/src/test/java/ma/movieTales/movie_service/ServiceImp/ReviewServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/src/main/java/ma/movieTales/discovery_service/DiscoveryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/src/main/java/ma/movieTales/discovery_service/DiscoveryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ma/movieTales/gateway_service/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ma/movieTales/gateway_service/GatewayServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ActorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/GenreController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ActorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ActorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/MovieTrackerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/MovieTrackerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ProductionCompanyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ActorDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/GenreDTO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ProductionCompanyDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ProductionCompanyDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieTrackerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/MovieTrackerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ProductionCompanyDTO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ReviewDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/ReviewDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Genres.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Genres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/DTO/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Actor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Genres.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/MovieTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/MovieTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/ProductionCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/ProductionCompany.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/ProductionCompany.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ActorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ActorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/GenreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/GenreMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ProductionCompanyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ProductionCompanyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ActorMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/GenreMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/MovieMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/MovieMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/MovieTrackerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/MovieTrackerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ProductionCompanyMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ReviewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/ReviewMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ActorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/GenreRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/MovieRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/MovieTrackerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/MovieTrackerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ProductionCompanyRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Repositories/ReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/MovieService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/MovieTrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/MovieTrackerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Service/ReviewService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieTrackerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/MovieTrackerImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/ReviewServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/ServiceImp/ReviewServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Utils/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/java/ma/movieTales/movie_service/Utils/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app-description.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-design.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classDiagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../k8s/test.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +196,10 @@
         <option value="package-info" />
         <option value="Enum" />
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Exception" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -80,6 +220,14 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JUnit.MovieRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceImpTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieTrackerImpTest.addMovieToWatchlistOrWatchedList_NewTracker.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieTrackerImpTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieTrackerRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReviewRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReviewRepositoryTest.testDeleteReview.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReviewServiceImpTest.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -90,14 +238,19 @@
     &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.MovieServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;movieServiceBranch&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Black/Desktop/AssetPlatforme&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Black/Desktop/MicroService/MovieTales&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -111,6 +264,9 @@
     ]
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ma.movieTales.movie_service.ServiceImp" />
@@ -119,6 +275,13 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Black\Desktop\MicroService\MovieTales\services\config-repo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ma.movieTales.movie_service.ServiceImp" />
+      <recent name="ma.movieTales.movie_service.Repositories" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -130,7 +293,83 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MovieServiceImpTest">
+    <configuration name="MovieServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.movieTales.movie_service.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ma.movieTales.movie_service.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="ma.movieTales.movie_service.ServiceImp.MovieServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieTrackerImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.movieTales.movie_service.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ma.movieTales.movie_service.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="ma.movieTales.movie_service.ServiceImp.MovieTrackerImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieTrackerImpTest.addMovieToWatchlistOrWatchedList_NewTracker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.movieTales.movie_service.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ma.movieTales.movie_service.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="ma.movieTales.movie_service.ServiceImp.MovieTrackerImpTest" />
+      <option name="METHOD_NAME" value="addMovieToWatchlistOrWatchedList_NewTracker" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.movieTales.movie_service.Repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ma.movieTales.movie_service.Repositories" />
+      <option name="MAIN_CLASS_NAME" value="ma.movieTales.movie_service.Repositories.ReviewRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.movieTales.movie_service.ServiceImp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ma.movieTales.movie_service.ServiceImp" />
+      <option name="MAIN_CLASS_NAME" value="ma.movieTales.movie_service.ServiceImp.ReviewServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ma.movieTales.config_service.ConfigServiceApplication" />
@@ -160,11 +399,25 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
+      <item itemvalue="JUnit.MovieServiceImpTest" />
+      <item itemvalue="JUnit.MovieTrackerImpTest" />
+      <item itemvalue="JUnit.MovieTrackerImpTest.addMovieToWatchlistOrWatchedList_NewTracker" />
+      <item itemvalue="JUnit.ReviewRepositoryTest" />
+      <item itemvalue="JUnit.ReviewServiceImpTest" />
       <item itemvalue="Spring Boot.ConfigServiceApplication" />
-      <item itemvalue="Spring Boot.MovieServiceApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.MovieServiceApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ReviewServiceImpTest" />
+        <item itemvalue="JUnit.MovieTrackerImpTest" />
+        <item itemvalue="JUnit.MovieTrackerImpTest.addMovieToWatchlistOrWatchedList_NewTracker" />
+        <item itemvalue="JUnit.MovieServiceImpTest" />
+        <item itemvalue="JUnit.ReviewRepositoryTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -196,11 +449,52 @@
       <workItem from="1744548700735" duration="4478000" />
       <workItem from="1744554127151" duration="4859000" />
       <workItem from="1744635449803" duration="6934000" />
-      <workItem from="1744702594934" duration="18566000" />
+      <workItem from="1744702594934" duration="18622000" />
+      <workItem from="1744809938197" duration="1788000" />
+      <workItem from="1744894381411" duration="8522000" />
+      <workItem from="1745927505414" duration="870000" />
+      <workItem from="1746179969550" duration="670000" />
+      <workItem from="1746662855223" duration="241000" />
+      <workItem from="1746709659005" duration="4436000" />
+      <workItem from="1746717731832" duration="324000" />
+      <workItem from="1746794124716" duration="12897000" />
+      <workItem from="1746809228214" duration="4950000" />
+      <workItem from="1746814413216" duration="183000" />
+      <workItem from="1746814674338" duration="1202000" />
+      <workItem from="1746881891594" duration="5727000" />
+      <workItem from="1746982827816" duration="8854000" />
+      <workItem from="1747047569190" duration="15096000" />
+      <workItem from="1747157774357" duration="11912000" />
+      <workItem from="1747218759751" duration="7000" />
+      <workItem from="1747221223406" duration="4169000" />
+      <workItem from="1747234187394" duration="4322000" />
+      <workItem from="1747250533449" duration="15000" />
+      <workItem from="1747296767473" duration="2955000" />
+      <workItem from="1747301962793" duration="652000" />
+      <workItem from="1747308961377" duration="28072000" />
+      <workItem from="1747389070098" duration="1457000" />
+      <workItem from="1747408063037" duration="3028000" />
+      <workItem from="1747418900449" duration="6298000" />
+      <workItem from="1747491536583" duration="12499000" />
+      <workItem from="1747507595606" duration="1638000" />
+      <workItem from="1747511046583" duration="3112000" />
     </task>
+    <task id="LOCAL-00001" summary="added review service and movie tracker imp">
+      <option name="closed" value="true" />
+      <created>1744721659349</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744721659349</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added review service and movie tracker imp" />
+    <option name="LAST_COMMIT_MESSAGE" value="added review service and movie tracker imp" />
   </component>
 </project>

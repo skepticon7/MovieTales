@@ -1,7 +1,6 @@
 package ma.movieTales.movie_service.Entity;
 
 import jakarta.persistence.*;
-import jdk.jshell.Snippet;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,10 +17,8 @@ public class MovieTracker {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //userId coming from mongoDB in the user-services
 
     private String userId;
-//    @Transient  private User user;
 
     @ManyToOne
     @JoinColumn(name = "movie_id" , referencedColumnName = "id" , nullable = false)

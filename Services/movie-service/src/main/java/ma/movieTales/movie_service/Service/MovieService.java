@@ -1,7 +1,12 @@
 package ma.movieTales.movie_service.Service;
 
-import ma.movieTales.movie_service.DTO.MovieDTO;
+//import ma.movieTales.movie_service.DTO.ActorMoviesDTO;
+//import ma.movieTales.movie_service.DTO.MovieDTO;
+import ma.movieTales.movie_service.DTO.MovieStatsDTO;
+import ma.movieTales.movie_service.DTO.UserTrackersAndReviewsDTO;
 import ma.movieTales.movie_service.Entity.Movie;
+import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.support.SimpleTriggerContext;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,13 +14,11 @@ import java.util.Optional;
 public interface MovieService {
 
 
-    MovieDTO getMovie(Long id);
 
-    //save movie from TDBM in our DB
-    MovieDTO saveMovie(MovieDTO movieDTO);
+    MovieStatsDTO getMovieStats(Long movieId);
 
-    // get the movies rated by the user
-    List<MovieDTO> getUserRatedList(String userId);
+    UserTrackersAndReviewsDTO deleteUserStuff(String userId);
+
 
 
 }

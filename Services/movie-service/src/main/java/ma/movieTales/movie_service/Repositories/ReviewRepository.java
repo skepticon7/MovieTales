@@ -20,9 +20,15 @@ public interface ReviewRepository extends JpaRepository<Review , Long> {
 
     Optional<Review> findReviewById(Long Id);
 
+    @Query("SELECT r FROM Review r WHERE r.movie.id = :movieId")
+    List<Review> findReviewsByMovie(Long movieId);
+
     @Modifying
     @Query("DELETE FROM Review r WHERE r.id = :reviewId")
     void deleteReview(@Param("reviewId") Long reviewId);
+
+    @Query("SELECT COALESCE(SUM(r.rating) , 0) FROM Review r WHERE r.movie.id = :movieId ")
+    Integer getSumOfMovieReviews(@Param("movieId") Long movieId);
 
 }
 

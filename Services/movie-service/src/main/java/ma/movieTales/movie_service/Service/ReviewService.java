@@ -9,16 +9,13 @@ import java.util.Optional;
 
 public interface ReviewService {
 
-    //adding a review to a movie
     ReviewDTO addReviewToMovie(String userId , Long movieId , ReviewDTO reviewDTO);
 
-    //updating a review
     ReviewDTO updateReview(String userId , Long movieId , ReviewDTO reviewDTO , Long reviewId);
 
-    //deleting a review
     ReviewDTO deleteReview(String userId , Long movieId , Long reviewId);
 
-    //getting the user reviews
     List<ReviewDTO> getUserReviews(String userId);
 
+    List<ReviewDTO> getMovieReviews(Long movieId);
 }

@@ -15,9 +15,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //userId coming from mongoDB in the user-services
     private String userId;
-//    @Transient  private User user;
 
     @ManyToOne
     @JoinColumn(name = "movie_id" , referencedColumnName = "id" , nullable = false)

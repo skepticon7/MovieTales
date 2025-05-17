@@ -25,6 +25,10 @@ public class GatewayServiceApplication {
 						.path("/movie-service/**")
 						.filters(f -> f.stripPrefix(1))
 						.uri("lb://movie-service"))
+				.route("user-service", r -> r
+						.path("/user-service/**")
+						.filters(f -> f.stripPrefix(1))
+						.uri("lb://user-service"))
 				.build();
 	}
 

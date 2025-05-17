@@ -2,8 +2,10 @@ package ma.movieTales.movie_service.Repositories;
 
 
 import ma.movieTales.movie_service.DTO.MovieTrackerDTO;
+import ma.movieTales.movie_service.Entity.Movie;
 import ma.movieTales.movie_service.Entity.MovieTracker;
 import ma.movieTales.movie_service.Enums.Status;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -19,9 +21,10 @@ public interface MovieTrackerRepository extends JpaRepository<MovieTracker , Lon
     @Query("SELECT m FROM MovieTracker m WHERE m.status = :status AND m.userId = :userId")
     List<MovieTracker> findMoviesByStatus(@Param("status") Status status , @Param("userId") String userId);
 
-    Optional<MovieTracker> findMovieTrackerById(Long id);
 
-    //this one removes the movie from both the watchlist and the watched list
+    @Query("SELECT m FROM MovieTracker m WHERE m.userId = :userId")
+    List<MovieTracker> findUserMovieTrackers(@Param("userId") String userId);
+
     @Modifying
     @Query("DELETE FROM MovieTracker m WHERE m.movie.id = :movieId AND m.userId = :userId")
     void removeMovieFromTracker(@Param("movieId") Long movieId , @Param("userId") String userId);
@@ -31,5 +34,15 @@ public interface MovieTrackerRepository extends JpaRepository<MovieTracker , Lon
             @Param("movieId") Long movieId,
             @Param("userId") String userId
     );
+
+    @Query("SELECT COUNT(*) FROM MovieTracker m WHERE m.movie.id = :movieId AND m.status = :status")
+    int getMovieInWatchedOrWatchlistNumber(@Param("movieId") Long movieId , @Param("status") Status status);
+
+
+
+
+    @Query("SELECT m FROM MovieTracker m WHERE m.userId = :userId AND m.status = 'WATCHED' ORDER BY m.createdAt DESC")
+    List<MovieTracker> findTenMoviesInWatchedListByUserId(@Param("userId") String userId , Pageable pageable);
+
 
 }

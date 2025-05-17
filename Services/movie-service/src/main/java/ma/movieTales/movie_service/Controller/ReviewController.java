@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import ma.movieTales.movie_service.DTO.ReviewDTO;
 import ma.movieTales.movie_service.Service.ReviewService;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +23,15 @@ public class ReviewController {
         List<ReviewDTO> reviews = reviewService.getUserReviews(userId);
         return new ResponseEntity<>(reviews , HttpStatus.OK);
     }
+
+    @GetMapping("/getMovieReviews")
+    public ResponseEntity<List<ReviewDTO>> getMovieReviews(
+            @RequestParam("movieId") Long movieId
+    ) {
+        List<ReviewDTO> reviews = reviewService.getMovieReviews(movieId);
+        return new ResponseEntity<>(reviews , HttpStatus.OK);
+    }
+
 
 
     @PostMapping("/addNewReview")
@@ -48,6 +56,7 @@ public class ReviewController {
         return new ResponseEntity<>(updatedReview , HttpStatus.OK);
     }
 
+
     @DeleteMapping("/deleteReview")
     public ResponseEntity<ReviewDTO> deleteReview(
             @RequestParam("userId") String userId,
@@ -57,6 +66,7 @@ public class ReviewController {
         ReviewDTO deletedReviewDTO = reviewService.deleteReview(userId , movieId , reviewId);
         return new ResponseEntity<>(deletedReviewDTO , HttpStatus.OK);
     }
+
 
 
 }

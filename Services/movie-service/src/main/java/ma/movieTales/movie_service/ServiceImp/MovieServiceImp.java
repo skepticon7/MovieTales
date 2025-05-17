@@ -2,80 +2,110 @@ package ma.movieTales.movie_service.ServiceImp;
 
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import ma.movieTales.movie_service.DTO.MovieDTO;
+import ma.movieTales.movie_service.DTO.*;
 import ma.movieTales.movie_service.Entity.*;
-import ma.movieTales.movie_service.Exceptions.AlreadyExistsException;
-import ma.movieTales.movie_service.Exceptions.NotFoundException;
-import ma.movieTales.movie_service.Mapper.ActorMapper;
-import ma.movieTales.movie_service.Mapper.GenreMapper;
-import ma.movieTales.movie_service.Mapper.MovieMapper;
-import ma.movieTales.movie_service.Mapper.ProductionCompanyMapper;
-import ma.movieTales.movie_service.MovieServiceApplication;
-import ma.movieTales.movie_service.Repositories.ActorRepository;
-import ma.movieTales.movie_service.Repositories.GenreRepository;
-import ma.movieTales.movie_service.Repositories.MovieRepository;
-import ma.movieTales.movie_service.Repositories.ProductionCompanyRepository;
+import ma.movieTales.movie_service.Enums.Status;
+import ma.movieTales.movie_service.Mapper.*;
+import ma.movieTales.movie_service.Repositories.*;
 import ma.movieTales.movie_service.Service.MovieService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
 public class MovieServiceImp implements MovieService {
 
     private final MovieRepository movieRepository;
-    private final ActorRepository actorRepository;
-    private final GenreRepository genreRepository;
-    private final ProductionCompanyRepository productionCompanyRepository;
-    private final MovieServiceApplication movieServiceApplication;
+    private final ReviewRepository reviewRepository;
+    private final MovieTrackerRepository movieTrackerRepository;
+
+
 
     @Override
-    public MovieDTO getMovie(Long id) {
-        Movie movie = movieRepository.findMovieById(id)
-                .orElseThrow(() -> new NotFoundException("Movie with title '" + id + "' doesnt exists."));
-        return MovieMapper.toDto(movie);
+    public MovieStatsDTO getMovieStats(Long movieId) {
+        Optional<Movie> movieOptional = movieRepository.findMovieById(movieId);
+        if (movieOptional.isEmpty()) {
+            return MovieStatsDTO.builder()
+                    .watched(0)
+                    .watchlist(0)
+                    .voteCount(0L)
+                    .averageRating(0.0f)
+                    .build();
+        }
+
+        Movie movie = movieOptional.get();
+        int watched = movieTrackerRepository.getMovieInWatchedOrWatchlistNumber(movieId, Status.WATCHED);
+        int watchlist = movieTrackerRepository.getMovieInWatchedOrWatchlistNumber(movieId, Status.WATCHLIST);
+        Long voteCount = movie.getVote_count();
+        Float averageRating = movie.getVote_average();
+
+        return MovieStatsDTO.builder()
+                .watched(watched)
+                .watchlist(watchlist)
+                .voteCount(voteCount)
+                .averageRating(averageRating)
+                .build();
     }
 
     @Override
     @Transactional
-    public MovieDTO saveMovie(MovieDTO movieDTO) {
+    public UserTrackersAndReviewsDTO deleteUserStuff(String userId) {
+        // Fetch all trackers and reviews
+        List<MovieTracker> userMovieTrackers = movieTrackerRepository.findUserMovieTrackers(userId);
+        List<Review> userReviews = reviewRepository.findReviewsByUserId(userId);
 
+        // Group reviews by movie and update stats once
+        Map<Long, List<Review>> reviewsByMovie = userReviews.stream()
+                .collect(Collectors.groupingBy(review -> review.getMovie().getId()));
 
-        if (movieRepository.getMovieByTitle(movieDTO.getTitle()).isPresent()) {
-            throw new AlreadyExistsException("Movie with title '" + movieDTO.getTitle() + "' already exists.");
-        }
+        reviewsByMovie.forEach((movieId, reviews) -> {
+            Optional<Movie> movieOptional = movieRepository.findMovieById(movieId);
+            if (movieOptional.isPresent()) {
+                Movie movie = movieOptional.get();
+                // Get the original count and sum
+                Integer originalReviewSum = reviewRepository.getSumOfMovieReviews(movieId);
+                int originalVoteCount = Math.toIntExact(movie.getVote_count());
 
-        List<Actor> movieActors = movieDTO.getActors().stream()
-                .map(ActorMapper::toEntity)
-                .map(actor -> actorRepository.getActorByName(actor.getName())
-                        .orElseGet(() -> actorRepository.save(actor)))
+                // Compute the new sum and vote count
+                int reviewsToRemove = reviews.size();
+                Integer newReviewSum = originalReviewSum - reviews.stream().mapToInt(Review::getRating).sum();
+                int newVoteCount = Math.max(originalVoteCount - reviewsToRemove, 0);
+
+                // Update the movie
+                movie.setVote_count((long) newVoteCount);
+                float newAverage = newVoteCount > 0 ? (newReviewSum / (float) newVoteCount) : 0.0f;
+                movie.setVote_average(newAverage);
+
+                movieRepository.save(movie);
+            }
+        });
+
+        // Bulk delete reviews
+        List<Long> reviewIds = userReviews.stream()
+                .map(Review::getId)
+                .toList();
+        reviewRepository.deleteAllById(reviewIds);
+
+        // Delete all trackers
+        movieTrackerRepository.deleteAll(userMovieTrackers);
+
+        // Convert to DTOs
+        List<ReviewDTO> reviews = userReviews.stream()
+                .map(ReviewMapper::toDto)
                 .toList();
 
-        List<ProductionCompany> movieProdCompanies = movieDTO.getProduction_companies().stream()
-                .map(ProductionCompanyMapper::toEntity)
-                .map(productionCompany -> productionCompanyRepository.getProdCompanyByName(productionCompany.getName())
-                        .orElseGet(() -> productionCompanyRepository.save(productionCompany)))
+        List<MovieTrackerDTO> movieTrackers = userMovieTrackers.stream()
+                .map(MovieTrackerMapper::toDto)
                 .toList();
 
-        List<Genres> movieGenres = movieDTO.getGenres().stream()
-                .map(GenreMapper::toEntity)
-                .map(genre -> genreRepository.getGenreByName(genre.getName())
-                        .orElseGet(() -> genreRepository.save(genre)))
-                .toList();
-
-        Movie newMovie = MovieMapper.toEntity(movieDTO);
-
-        movieActors.forEach(actor -> actor.getMovies().add(newMovie));
-        movieProdCompanies.forEach(productionCompany -> productionCompany.getMovies().add(newMovie));
-        movieGenres.forEach(genre -> genre.getMovies().add(newMovie));
-
-        newMovie.setActors(movieActors);
-        newMovie.setProduction_companies(movieProdCompanies);
-        newMovie.setGenres(movieGenres);
-
-        return MovieMapper.toDto(movieRepository.save(newMovie));
+        return new UserTrackersAndReviewsDTO(reviews, movieTrackers);
     }
+
+
+
 
 }
