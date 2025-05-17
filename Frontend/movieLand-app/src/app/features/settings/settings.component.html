@@ -1,0 +1,149 @@
+<div class="px-5 flex gap-15 ">
+  <div class="flex gap-5 items-start flex-col">
+    <button
+      (click)="toggleSelectedSection('personalInfo')"
+      [ngClass]="{'background-fullgrey' : isSectionActive('personalInfo')}"
+      class="w-full flex gap-3 items-center cursor-pointer transition-all rounded-md duration-200 button-greyforHover p-3">
+      <lucide-icon [img]="LucideUser" color="white"></lucide-icon>
+      <p class="inter-semibold text-lg text-white">Personal Information</p>
+    </button>
+
+    <button
+      (click)="toggleSelectedSection('passwordAndSecurity')"
+      [ngClass]="{'background-fullgrey' : isSectionActive('passwordAndSecurity')}"
+      class="w-full flex gap-3 items-center cursor-pointer transition-all rounded-md duration-200 button-greyforHover p-3">
+      <lucide-icon [img]="LucideShieldPlus" color="white"></lucide-icon>
+      <p class="inter-semibold text-lg text-white">Password & Security</p>
+    </button>
+
+    <button
+      (click)="toggleSelectedSection('deleteAccount')"
+      [ngClass]="{'background-fullgrey' : isSectionActive('deleteAccount')}"
+      class="w-full flex gap-3 items-center cursor-pointer transition-all rounded-md duration-200 button-greyforHover p-3">
+      <lucide-icon [img]="LucideTrash" color="white"></lucide-icon>
+      <p class="inter-semibold text-lg text-white">Delete Account</p>
+    </button>
+
+  </div>
+
+<!--  personal info here-->
+  <div
+      *ngIf="isSectionActive('personalInfo')"
+      class="border-2 flex flex-col gap-7 p-5 border-gray-500 background-fullgrey rounded-md">
+    <h1 class="text-2xl inter-bold">Personal Information</h1>
+    <div class="flex flex-col gap-10">
+      <div class="flex gap-5 items-center justify-start">
+        <div class="relative">
+          <img [src]="profileImage" class="w-20 h-20 rounded-full">
+
+          <div
+            class="bg-green-500 hover:bg-green-700 duration-200 transition-all absolute bottom-0 right-[-7px] rounded-lg p-1 cursor-pointer">
+            <label for="fileInput">
+              <i-lucide color="white" [img]="LucidePen"></i-lucide>
+            </label>
+          </div>
+
+          <input
+            id="fileInput"
+            type="file"
+            accept="image/*"
+            class="hidden"
+            (change)="changeImage($event)"
+            >
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-lg inter-semibold">Profile Picture</p>
+          <p class="text-md opacity-70 inter-medium">This will be displayed on your profile</p>
+        </div>
+      </div>
+      <form (ngSubmit)="handleNewUserSettings()" [formGroup]="settingsForm" class="flex flex-col gap-10 items-start justify-start w-full">
+        <div class="flex gap-5 w-full">
+          <div class="relative background-black">
+            <input formControlName="username" type="text" placeholder="Name" class="pl-10 py-2 border rounded w-full inter-regular">
+            <i class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+              <lucide-icon color="white" [img]="LucideUserRound"></lucide-icon>
+            </i>
+          </div>
+          <div class="relative background-black">
+            <input formControlName="email" type="text" placeholder="@mail.com" class="pl-10 py-2 border rounded w-full inter-regular">
+            <i class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+              <lucide-icon color="white" [img]="LucideMail"></lucide-icon>
+            </i>
+          </div>
+        </div>
+        <button
+          [disabled]="loading()"
+          [ngClass]="loading() ? 'opacity-50 cursor-not-allowed' : ''"
+          class="w-30 self-end text-center bg-green-600 transition-all duration-200 hover:bg-green-700 text-md py-2 px-5 rounded inter-bold">
+          <p *ngIf="!loading()">Update</p>
+          <span *ngIf="loading()" class="loading loading-spinner loading-md"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div
+    *ngIf="isSectionActive('passwordAndSecurity')"
+    class="border-2 flex flex-col gap-7 p-5 border-gray-500 background-fullgrey rounded-md">
+    <h1 class="text-2xl inter-bold">Change Password</h1>
+    <div class="flex flex-col gap-10">
+      <form (ngSubmit)="handleNewPassword()" [formGroup]="passwordForm"  class="flex flex-col gap-10 items-start justify-start w-full">
+        <div class="flex flex-col gap-5 w-full">
+          <div class="relative background-black">
+            <input formControlName="oldPassword" type="password" placeholder="Old Password" class="pl-10 py-2 border rounded w-full inter-regular">
+            <i class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+              <lucide-icon color="white" [img]="LucideLockKeyhole"></lucide-icon>
+            </i>
+          </div>
+          <div class="relative background-black">
+            <input formControlName="newPassword" type="password" placeholder="New Password" class="pl-10 py-2 border rounded w-full inter-regular">
+            <i class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+              <lucide-icon color="white" [img]="LucideLockKeyhole"></lucide-icon>
+            </i>
+          </div>
+
+          <div class="relative background-black">
+            <input formControlName="confirmNewPassword" type="password" placeholder="Confirm New Password" class="pl-10 py-2 border rounded w-full inter-regular">
+            <i class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+              <lucide-icon color="white" [img]="LucideLockKeyhole"></lucide-icon>
+            </i>
+          </div>
+        </div>
+        <button
+          [disabled]="passwordForm.invalid"
+          [ngClass]="{ 'opacity-50 cursor-not-allowed': passwordForm.invalid , 'hover:bg-green-700' : !passwordForm.invalid}"
+          class="w-full self-end bg-green-600 transition-all duration-200 text-md py-2 px-15 rounded inter-bold">
+          <p *ngIf="!loading()">Change Password</p>
+          <span *ngIf="loading()" class="loading loading-spinner loading-md"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div
+    *ngIf="isSectionActive('deleteAccount')"
+    class="border-2 flex flex-col gap-7 p-5 border-gray-500 background-fullgrey rounded-md w-98">
+    <h1 class="text-2xl inter-bold">Delete Your Account</h1>
+    <div class="flex flex-col gap-10">
+      <form (ngSubmit)="handleDeleteAccount()" [formGroup]="deleteForm"  class="flex flex-col gap-10 items-start justify-start w-full">
+        <div class="flex flex-col gap-5 w-full">
+          <div class="relative background-black w-full">
+            <input formControlName="password" type="password" placeholder="Enter your password" class="pl-10 py-2 border rounded w-full inter-regular">
+            <i class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500 w-full">
+              <lucide-icon color="white" [img]="LucideLockKeyhole"></lucide-icon>
+            </i>
+          </div>
+        </div>
+        <button
+          [disabled]="deleteForm.invalid"
+          [ngClass]="{ 'opacity-50 cursor-not-allowed': deleteForm.invalid , 'hover:bg-green-700' : !deleteForm.invalid}"
+          class="w-full self-end bg-red-600 transition-all duration-200 hover:bg-red-700 text-md py-2 px-15 rounded inter-bold">
+          <p *ngIf="!loading()">Delete Account Permanently</p>
+          <span *ngIf="loading()" class="loading loading-spinner loading-md"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+</div>

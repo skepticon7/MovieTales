@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes : black --default;
+};
+
+.inter-light {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-medium {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.inter-semibold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inter-extrabold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.inter-black {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+.background-black {
+  background-color: #000;
+}
+
+.background-fullgrey {
+  background-color: #262626;
+}
+
+.background-grey {
+  background-color: #121212;
+}
+
+.button-grey-hover:hover {
+
+  background-color: #121212;
+}
+
+.button-greyforHover:hover {
+  background-color: #262626;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 10px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.tooltip-animate {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -10px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.dropdown-animate {
+  animation : slideDown 0.3s ease-out forwards;
+}
+
+@keyframes modelSlideUp {
+  from {
+    transform: translateY(5%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes modelSlideDown {
+  from {
+    transform: translate(0%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(5%, 10px);
+    opacity: 1;
+  }
+}
+
+.modal-slideUp {
+  animation: modelSlideUp 0.3s ease-out forwards;
+}
+
+.modal-slideDown {
+  animation: modelSlideDown 0.3s ease-out forwards;
+}
+
+
+
+

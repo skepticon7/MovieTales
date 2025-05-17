@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="flex">
+  <app-sidebar></app-sidebar>
+  <div class="px-10 py-5 background-grey w-screen flex flex-col gap-5">
+    <ng-container *ngIf="movies$ | async as movies ; else loadingOrError">
+      <ng-container *ngIf="movies.length > 0 ; else empty">
+        <p class="text-xl text-white opacity-70 inter-semibold">Showing matches for "{{ this.keyword }}"</p>
+        <hr class="border-t-2 border-white opacity-70">
+        <div class="flex flex-col gap-10">
+          <div *ngFor="let movie of movies">
+            <div class="flex gap-3 items-start  relative">
+
+                <img class="w-40 border-transparent border-2 rounded-md hover:border-white transition-all duration-200 cursor-pointer"   [src]="'https://image.tmdb.org/t/p/original/' + movie.poster_path"
+                     alt="{{ movie.original_title }} Poster" routerLink="/movie" [queryParams]="{'id' : movie.id}"/>
+              <div class="flex flex-col items-start justify-between w-1/2 ">
+                <div class="flex flex-col gap-2">
+                  <p class="text-white font-bold text-2xl hover:underline cursor-pointer" routerLink="/movie" [queryParams]="{'id' : movie.id}">{{ movie.title }} <span class="text-gray-400 inter-semibold">{{ movie.release_date }}</span></p>
+                  <p class="text-white opacity-80 inter-light text-sm w-full">{{ movie.alternativeTitles }}</p>
+                </div>
+                <p class="text-white inter-semibold text-md  absolute bottom-0">Directed By  <span class="ml-1 inter-bold rounded-sm background-fullgrey py-2 px-2">{{ movie.director }}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </ng-container>
+      <ng-template #empty>
+        <h1 class="text-3xl inter-semibold text-white">No movies with keyword {{this.keyword}}</h1>
+      </ng-template>
+    </ng-container>
+    <ng-template #loadingOrError>
+      <ng-container *ngIf="errorMessage ; else loading">
+        <h1 class="text-3xl inter-semibold text-white"> {{errorMessage}}</h1>
+      </ng-container>
+      <ng-template  #loading>
+        <span class="loading loading-spinner loading-lg self-center"></span>
+      </ng-template>
+    </ng-template>
+  </div>
+</div>
