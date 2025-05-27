@@ -1,0 +1,48 @@
+<!-- login.component.html -->
+<div class="flex justify-center items-center min-h-screen bg-black">
+  <div class="flex flex-col gap-5  w-80 background-semigrey border-1 border-white border-opacity-25 rounded p-6">
+    <!-- Logo/Header -->
+    <div class="flex gap-2 items-center self-center">
+      <h1 class="text-3xl font-bold text-white inter-black">
+        MovieLand
+      </h1>
+      <img class="w-8 h-8" src="Frame.png">
+    </div>
+
+    <form (ngSubmit)="handleLogin()" [formGroup]="loginForm" class="flex flex-col gap-7 ">
+      <div class="flex flex-col gap-2">
+        <label for="username" class=" text-xs poppins-regular text-white inter-semibold">Username</label>
+        <input
+          type="text"
+          id="username"
+          formControlName="username"
+          class="w-full bg-transparent border-1 border-white rounded p-2 text-white inter-light focus:outline-none "
+          >
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="password" class="text-xs poppins-regular text-white mb-1 inter-semibold">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          class="w-full bg-transparent border-1 border-white rounded p-2 text-white focus:outline-none "
+         >
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="loginForm.invalid"
+        [ngClass]="{ 'opacity-50 cursor-not-allowed': loginForm.invalid }"
+        class="w-full bg-green-600 hover:bg-green-700 text-white text-md py-2 rounded inter-bold">
+        <p *ngIf="!loading()">Login</p>
+        <span *ngIf="loading()" class="loading loading-spinner loading-md"></span>
+      </button>
+    </form>
+
+    <!-- Footer Links -->
+    <div class="text-center mt-4 text-xs text-white flex gap-2 self-center">
+      <p class="inter-regular">New to MovieLand ?</p>  <a routerLink="/signup" class="hover:underline inter-semibold">Register</a>
+    </div>
+  </div>
+</div>

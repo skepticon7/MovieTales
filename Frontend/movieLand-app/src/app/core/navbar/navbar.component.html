@@ -1,0 +1,37 @@
+<div class="background-black py-5 px-5 flex items-center justify-between">
+  <div class="flex gap-2 items-center justify-center">
+    <p class="inter-black text-4xl text-white">MovieLand</p>
+    <img class="w-10 h-10" src="Frame.png">
+  </div>
+  <div class="flex gap-3">
+    <form (ngSubmit)="handleSearch($event)"  class="background-grey rounded-md flex items-center gap-0 px-2 py-1">
+      <input
+        placeholder="Search for a Movie"
+        class="flex-1 focus:outline-none text-md text-white inter-medium py-2 px-4 bg-transparent"
+        type="text"
+      />
+      <button class="flex-shrink-0 px-3 py-2">
+        <i-lucide class="cursor-pointer" [img]="LucideSearch" color="white"></i-lucide>
+      </button>
+    </form>
+    <div class="relative">
+      <div class="background-grey button-greyforHover transition-colors duration-200 flex gap-3 items-center justify-center px-3 py-2 rounded-md cursor-pointer"
+           (click)="toggleDropdown()"
+      >
+        <img src="{{this.authService.getCurrentUser()?.avatarUrl}}" class="w-8 h-8 rounded-full" />
+        <p class="text-md text-white inter-bold">{{ this.authService.getCurrentUser()?.username }}</p>
+        <i-lucide class="cursor-pointer" [img]="isDropdownOpen ? LucideChevronUp : LucideChevronDown" color="white"></i-lucide>
+      </div>
+
+      <div
+        *ngIf="isDropdownOpen"
+        class="absolute left-1/2 mt-2 w-40 background-grey text-white rounded-md shadow-lg p-2 dropdown-animate"
+      >
+        <button (click)="handleLogout()"  class="flex gap-5 w-full text-left px-4 py-2 transition-all duration-200  button-greyforHover rounded cursor-pointer ">
+          <i-lucide [img]="LucideLogOut"></i-lucide>
+          <p class="inter-medium">Logout</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

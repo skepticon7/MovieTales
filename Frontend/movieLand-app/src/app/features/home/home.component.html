@@ -1,0 +1,26 @@
+<div class="flex  flex-col gap-10 justify-center items-center px-5 ">
+    <ng-container *ngIf="tenWatchedMovies$ | async as tenWatchedMovies ;  else loadingOrError">
+      <ng-container *ngIf="tenWatchedMovies.length > 0 ; else empty">
+        <h1 class="text-3xl inter-semibold text-white">Welcome <span class="inter-bold opacity-85">{{this.authService.getCurrentUser()?.username}}</span> , Here is what you've been watching</h1>
+          <div  class="grid grid-cols-5 gap-10">
+            <div *ngFor="let movie of tenWatchedMovies">
+              <img
+                routerLink="/movie" [queryParams]="{'id' : movie.movieDTO.id}"
+                class="w-50 border-transparent border-2 rounded-md hover:border-white transition-all duration-200 cursor-pointer"
+                [src]="'https://image.tmdb.org/t/p/original/' + movie.details.poster_path" alt="Movie 1"  />
+            </div>
+          </div>
+      </ng-container>
+      <ng-template #empty>
+        <h1 class="text-3xl inter-semibold text-white">Welcome <span class="inter-bold opacity-85">{{this.authService.getCurrentUser()?.username}}</span> , Browse our collection of movies !</h1>
+      </ng-template>
+    </ng-container>
+    <ng-template #loadingOrError>
+      <ng-container *ngIf="errorMessage ; else loading">
+        <h1 class="text-3xl inter-semibold text-white"> {{errorMessage}}</h1>
+      </ng-container>
+      <ng-template  #loading>
+        <span class="loading loading-spinner loading-lg"></span>
+      </ng-template>
+    </ng-template>
+</div>

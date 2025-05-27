@@ -1,0 +1,18 @@
+<div class="h-screen overflow-y-auto background-black p-10 w-55 flex flex-col gap-3">
+  <button [ngClass]="{'background-grey' : isActive('Home')}" (click)="selectOption('Home')" class="flex gap-3 px-3 py-2 w-full items-center cursor-pointer rounded-md transition-all duration-200 button-grey-hover" routerLink="/home">
+    <lucide-icon [img]="LucideHome" color="white"></lucide-icon>
+    <p class="inter-semibold text-lg text-white">Home</p>
+  </button>
+  <button [ngClass]="{ 'background-grey' : isActive('Watched')}" (click)="selectOption('Watched')" class="flex gap-3 items-center cursor-pointer transition-all rounded-md duration-200 button-grey-hover px-3 py-2 " routerLink="/watched">
+    <lucide-icon [img]="LucideEye" color="white"></lucide-icon>
+    <p class="inter-semibold text-lg text-white">Watched</p>
+  </button>
+  <button [ngClass]="{ 'background-grey' : isActive('Watchlist')}" (click)="selectOption('Watchlist')" class="flex gap-3 items-center cursor-pointer transition-all rounded-md duration-200 button-grey-hover px-3 py-2" routerLink="/watchlist">
+    <lucide-icon [img]="LucideClock4" color="white"></lucide-icon>
+    <p class="inter-semibold text-lg text-white">Watchlist</p>
+  </button>
+  <button [ngClass]="{ 'background-grey' : isActive('Settings')}" (click)="selectOption('Settings')" class="flex gap-3 items-center cursor-pointer transition-all rounded-md duration-200 button-grey-hover px-3 py-2" routerLink="/settings">
+    <lucide-icon [img]="LucideSettings" color="white"></lucide-icon>
+    <p class="inter-semibold text-lg text-white">Settings</p>
+  </button>
+</div>

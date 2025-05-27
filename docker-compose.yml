@@ -1,0 +1,79 @@
+services:
+  movieland-discovery-service:
+    build: ./services/discovery-service
+    container_name: movieland-discovery-service
+    ports:
+      - '8761:8761'
+    expose:
+      - '8761'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://movieland-discovery-service:8761/actuator/health"]
+      interval: 10s
+      retries: 3
+
+  movieland-config-service:
+    build: ./services/config-service
+    container_name: movieland-config-service
+    ports:
+      - '8888:8888'
+    expose:
+      - '8888'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/actuator/health"]
+    environment:
+      - DISCOVERY_SERVICE_URL=http://movieland-discovery-service:8761/eureka/
+    depends_on:
+      movieland-discovery-service:
+        condition: service_healthy
+
+  movieland-gateway-service:
+    build: ./services/gateway-service
+    container_name: movieland-gateway-service
+    ports:
+      - '8080:8080'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://movieland-discovery-service:8761/eureka/
+      - CONFIG_SERVICE_URL=http://movieland-config-service:8888
+    depends_on:
+      movieland-config-service:
+        condition: service_healthy
+
+  movieland-user-service:
+    build: ./services/user-service
+    container_name: movieland-user-service
+    ports:
+      - '5050:5050'
+    expose:
+      - '5050'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5050/actuator/health"]
+    environment:
+      - DISCOVERY_SERVICE_URL=http://movieland-discovery-service:8761/eureka/
+      - CONFIG_SERVICE_URL=http://movieland-config-service:8888
+    depends_on:
+      movieland-config-service:
+        condition: service_healthy
+
+  movieland-movie-service:
+    build: ./services/movie-service
+    container_name: movieland-movie-service
+    ports:
+      - '8081:8081'
+    expose:
+      - '8081'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://movieland-discovery-service:8761/eureka/
+      - CONFIG_SERVICE_URL=http://movieland-config-service:8888
+    depends_on:
+      movieland-user-service:
+        condition: service_healthy
+      movieland-config-service:
+        condition: service_healthy
+
+  movieland-frontend:
+    build: ./frontend/movieLand-app
+    container_name: movieland-frontend
+    ports:
+      - '80:80'
+    expose:
+      - '80'

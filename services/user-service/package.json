@@ -1,0 +1,39 @@
+{
+  "name": "movietales",
+  "version": "1.0.0",
+  "main": "movie-service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "start:all": "concurrently -n USER,MOVIE,RATING,GATEWAY -c green,blue,magenta,cyan \"nodemon user-service.js\" \"nodemon movie-service.js\" \"nodemon rating-service.js\" \"nodemon server.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "eureka-js-client": "^4.5.0",
+    "express": "^5.1.0",
+    "express-actuator": "^1.8.4",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Testosteronee/movietales-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Testosteronee/movietales-api/issues"
+  },
+  "homepage": "https://github.com/Testosteronee/movietales-api#readme",
+  "description": ""
+}
