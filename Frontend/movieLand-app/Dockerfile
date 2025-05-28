@@ -9,15 +9,12 @@ COPY . .
 
 RUN npm run build --prod
 
-FROM node:18-alpine AS production-stage
+FROM nginx:alpine AS production-stage
 
-WORKDIR /app
+COPY --from=build-stage /app/dist/movie-land-app/browser /usr/share/nginx/html
 
-# Install http-server globally
-RUN npm install -g http-server
-
-COPY --from=build-stage /app/dist/movie-land-app/browser ./dist
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
-CMD ["http-server", "./dist", "-p", "80"]
+CMD ["nginx", "-g", "daemon off;"]

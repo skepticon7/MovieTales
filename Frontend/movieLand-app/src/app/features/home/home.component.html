@@ -6,7 +6,7 @@
             <div *ngFor="let movie of tenWatchedMovies">
               <img
                 routerLink="/movie" [queryParams]="{'id' : movie.movieDTO.id}"
-                class="w-50 border-transparent border-2 rounded-md hover:border-white transition-all duration-200 cursor-pointer"
+                class="w-50 border-transparent border-3 rounded-md hover:border-white transition-all duration-200 cursor-pointer"
                 [src]="'https://image.tmdb.org/t/p/original/' + movie.details.poster_path" alt="Movie 1"  />
             </div>
           </div>

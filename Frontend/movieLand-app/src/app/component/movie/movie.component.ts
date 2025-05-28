@@ -207,12 +207,12 @@ export class MovieComponent implements OnInit{
 
 
   handleReview() {
-    console.log(this.reviewGroup.value);
     if(this.reviewId){
         this.EditReview(this.reviewId);
      }else{
        this.AddReview();
      }
+
   }
 
   handleModal(reviewId : string | null) : void {

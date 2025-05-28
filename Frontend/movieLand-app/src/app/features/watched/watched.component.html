@@ -6,9 +6,9 @@
         <div class="justify-start self-end">
           <button
             *ngIf="filtersCheck()"
-            class="flex gap-2 text-white bg-red-500 hover:bg-red-600 px-3 py-2 rounded-md transition-all duration-200"
+            class="flex gap-1 items-center justify-center text-white bg-red-500 hover:bg-red-600 px-3 py-1 rounded-md transition-all duration-200"
             (click)="resetFilters()">
-            <p class="inter-bold text-md">Reset Filters</p>
+            <p class="inter-bold text-sm">Reset Filters</p>
             <i-lucide [img]="LucideX"></i-lucide>
           </button>
         </div>
