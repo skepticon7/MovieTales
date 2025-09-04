@@ -102,4 +102,3 @@ ng serve
 ## 📫 Contributing
 
 Feel free to open issues and make pull requests. Your contributions are welcome!
-You can copy this entire code block and paste it directly into your GitHub repository as README.md. The formatting will render properly with all the headings, code blocks, emojis, and styling when viewed on GitHub.
